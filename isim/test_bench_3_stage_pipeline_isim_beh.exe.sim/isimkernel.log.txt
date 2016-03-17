@@ -1,0 +1,10 @@
+Command line:
+   test_bench_3_stage_pipeline_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49732
+
+Tue Mar 08 11:33:21 2016
+
+
+ Elaboration Time: 0.171601 sec

@@ -20,6 +20,26 @@ module test_bench_3_stage_pipeline;
 	wire [31:0] INST;
 	wire [31:0] rdata1;
 	wire [31:0] rdata2;
+	wire [31:0] aluout;
+
+	// Instantiate the Unit Under Test (UUT)
+	pipelined_regfile_3stage uut (
+		.clk(clk), 
+		.rst(rst), 
+		.fileid(fileid), 
+		.PCOUT(PCOUT), 
+		.INST(INST), 
+		.rdata1(rdata1), 
+		.rdata2(rdata2), 
+		.aluout(aluout)
+	);
+	
+	
+	/*	// Outputs
+	wire [31:0] PCOUT;
+	wire [31:0] INST;
+	wire [31:0] rdata1;
+	wire [31:0] rdata2;
 	wire [31:0] rdata1_ID_EXE;
 	wire [31:0] rdata2_ID_EXE;
 	wire [31:0] imm_ID_EXE;
@@ -47,6 +67,7 @@ module test_bench_3_stage_pipeline;
 		.waddr_out_ID_EXE(waddr_out_ID_EXE), 
 		.aluout(aluout)
 	);
+	*/
 
 always #15 clk = ~clk;
 	initial begin

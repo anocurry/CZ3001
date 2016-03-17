@@ -6,6 +6,9 @@
 `define COM 4'b0100
 `define MUL  4'b0101
 `define ADDI 4'b0110
+`define LW 4'b0111
+`define SW 4'b1000
+`define BEQ 4'b1001
 
 //for fileIO
 `timescale 1ns / 10ps

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-03-08T11:41:52</DateModified>
+  <DateModified>2016-03-17T09:44:42</DateModified>
   <ModuleName>pipelined_regfile_3stage</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>F:/NTU-Sem four/Lab3/lab3/iseconfig/pipelined_regfile_3stage.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>F:/NTU-Sem four/Lab3/lab3\</ImplementationReportsDirectory>
+  <SavedFilePath>Y:/Lab3/lab3/iseconfig/pipelined_regfile_3stage.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>Y:/Lab3/lab3\</ImplementationReportsDirectory>
   <DateInitialized>2016-02-25T09:48:58</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
