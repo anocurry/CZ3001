@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "Y:/Lab3/stagespipeline/pipelined_regfile_5stage.xst" -ofn "Y:/Lab3/stagespipeline/pipelined_regfile_5stage.syr" 

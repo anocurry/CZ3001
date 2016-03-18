@@ -1,0 +1,698 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Reading design: pipelined_regfile_5stage.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "pipelined_regfile_5stage.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "pipelined_regfile_5stage"
+Output Format                      : NGC
+Target Device                      : xc6slx4-3-csg225
+
+---- Source Options
+Top Module Name                    : pipelined_regfile_5stage
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\regfile.v" into library work
+Parsing verilog file "define.v" included at line 2.
+Parsing module <regfile>.
+Analyzing Verilog file "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\PC.v" into library work
+Parsing verilog file "define.v" included at line 1.
+Parsing module <PC1>.
+Analyzing Verilog file "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\MEM_WB_stage.v" into library work
+Parsing verilog file "define.v" included at line 2.
+Parsing module <MEM_WB_stage>.
+Analyzing Verilog file "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\memory.v" into library work
+Parsing verilog file "define.v" included at line 1.
+Parsing module <memory>.
+Analyzing Verilog file "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\ID_EXEstage.v" into library work
+Parsing verilog file "define.v" included at line 1.
+Parsing module <ID_EXE_stage>.
+Analyzing Verilog file "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\EXE_MEM_stage.v" into library work
+Parsing verilog file "define.v" included at line 3.
+Parsing module <EXE_MEM_stage>.
+Analyzing Verilog file "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\DM.v" into library work
+Parsing verilog file "define.v" included at line 1.
+Parsing module <DM>.
+Analyzing Verilog file "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\control.v" into library work
+Parsing verilog file "define.v" included at line 3.
+Parsing module <control>.
+Analyzing Verilog file "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\alu.v" into library work
+Parsing verilog file "define.v" included at line 1.
+Parsing module <alu>.
+Analyzing Verilog file "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\pipelined_regfile_5stage.v" into library work
+Parsing verilog file "define.v" included at line 2.
+Parsing module <pipelined_regfile_5stage>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <pipelined_regfile_5stage>.
+
+Elaborating module <PC1>.
+
+Elaborating module <memory>.
+"\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\memory.v" Line 47. $write Opening Fileid 0\n
+WARNING:HDLCompiler:816 - "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\memory.v" Line 49: System function call feof not supported
+WARNING:HDLCompiler:817 - "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\memory.v" Line 62: System task fclose ignored for synthesis
+
+Elaborating module <control>.
+
+Elaborating module <regfile>.
+
+Elaborating module <ID_EXE_stage>.
+
+Elaborating module <EXE_MEM_stage>.
+
+Elaborating module <MEM_WB_stage>.
+
+Elaborating module <alu>.
+WARNING:HDLCompiler:295 - "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\alu.v" Line 34: case condition never applies
+WARNING:HDLCompiler:295 - "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\alu.v" Line 35: case condition never applies
+
+Elaborating module <DM>.
+"\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\DM.v" Line 48. $write Opening Fileid 0\n
+WARNING:HDLCompiler:816 - "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\DM.v" Line 50: System function call feof not supported
+WARNING:HDLCompiler:817 - "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\DM.v" Line 63: System task fclose ignored for synthesis
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <pipelined_regfile_5stage>.
+    Related source file is "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\pipelined_regfile_5stage.v".
+WARNING:Xst:647 - Input <fileid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit adder for signal <PCIN> created at line 52.
+    Found 32-bit adder for signal <res> created at line 94.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   5 Multiplexer(s).
+Unit <pipelined_regfile_5stage> synthesized.
+
+Synthesizing Unit <PC1>.
+    Related source file is "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\PC.v".
+    Found 32-bit register for signal <currPC>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <PC1> synthesized.
+
+Synthesizing Unit <memory>.
+    Related source file is "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\memory.v".
+WARNING:Xst:647 - Input <fileid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1024x32-bit dual-port RAM <Mram_memory> for signal <memory>.
+    Found 10-bit register for signal <addr_r<9:0>>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  10 D-type flip-flop(s).
+Unit <memory> synthesized.
+
+Synthesizing Unit <control>.
+    Related source file is "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\control.v".
+    Summary:
+	no macro.
+Unit <control> synthesized.
+
+Synthesizing Unit <regfile>.
+    Related source file is "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\regfile.v".
+    Found 1024-bit register for signal <n0052>.
+    Found 32-bit 32-to-1 multiplexer for signal <waddr[4]_regdata[31][31]_wide_mux_2_OUT> created at line 46.
+    Found 32-bit 32-to-1 multiplexer for signal <raddr1[4]_regdata[31][31]_wide_mux_40_OUT> created at line 49.
+    Found 32-bit 32-to-1 multiplexer for signal <raddr2[4]_regdata[31][31]_wide_mux_43_OUT> created at line 51.
+    Found 5-bit comparator equal for signal <waddr[4]_raddr1[4]_equal_40_o> created at line 49
+    Found 5-bit comparator equal for signal <waddr[4]_raddr2[4]_equal_43_o> created at line 51
+    Summary:
+	inferred 1024 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  38 Multiplexer(s).
+Unit <regfile> synthesized.
+
+Synthesizing Unit <ID_EXE_stage>.
+    Related source file is "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\ID_EXEstage.v".
+    Found 32-bit register for signal <rdata1_out>.
+    Found 32-bit register for signal <rdata2_out>.
+    Found 32-bit register for signal <imm_out>.
+    Found 3-bit register for signal <aluop_out>.
+    Found 1-bit register for signal <alusrc_out>.
+    Found 32-bit register for signal <PCIN_out>.
+    Found 1-bit register for signal <wen_out>.
+    Found 1-bit register for signal <branch_out>.
+    Found 1-bit register for signal <memwrite_out>.
+    Found 1-bit register for signal <memread_out>.
+    Found 1-bit register for signal <memtoreg_out>.
+    Found 5-bit register for signal <waddr_out>.
+    Summary:
+	inferred 142 D-type flip-flop(s).
+Unit <ID_EXE_stage> synthesized.
+
+Synthesizing Unit <EXE_MEM_stage>.
+    Related source file is "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\EXE_MEM_stage.v".
+    Found 32-bit register for signal <rdata2_out>.
+    Found 5-bit register for signal <waddr_out>.
+    Found 1-bit register for signal <wen_out>.
+    Found 1-bit register for signal <memwrite_out>.
+    Found 1-bit register for signal <memread_out>.
+    Found 1-bit register for signal <memtoreg_out>.
+    Found 32-bit register for signal <result_out>.
+    Summary:
+	inferred  73 D-type flip-flop(s).
+Unit <EXE_MEM_stage> synthesized.
+
+Synthesizing Unit <MEM_WB_stage>.
+    Related source file is "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\MEM_WB_stage.v".
+    Found 5-bit register for signal <waddr_out>.
+    Found 1-bit register for signal <wen_out>.
+    Found 1-bit register for signal <memtoreg_out>.
+    Found 32-bit register for signal <result_out>.
+    Summary:
+	inferred  39 D-type flip-flop(s).
+Unit <MEM_WB_stage> synthesized.
+
+Synthesizing Unit <alu>.
+    Related source file is "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\alu.v".
+    Found 32-bit subtractor for signal <a[31]_b[31]_sub_2_OUT> created at line 27.
+    Found 32-bit adder for signal <a[31]_b[31]_add_7_OUT> created at line 33.
+    Found 32x32-bit multiplier for signal <n0016> created at line 31.
+    Found 32-bit 7-to-1 multiplexer for signal <out> created at line 25.
+    Found 32-bit comparator lessequal for signal <n0003> created at line 30
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <alu> synthesized.
+
+Synthesizing Unit <DM>.
+    Related source file is "\\ds10.sce.ntu.edu.sg\hwl2$\student\sisi0001\Lab3\stagespipeline\DM.v".
+WARNING:Xst:647 - Input <fileid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1024x32-bit dual-port RAM <Mram_memory> for signal <memory>.
+    Found 32-bit register for signal <addr_r>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <DM> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 1024x32-bit dual-port RAM                             : 2
+# Multipliers                                          : 1
+ 32x32-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 3
+ 32-bit subtractor                                     : 1
+# Registers                                            : 27
+ 1-bit register                                        : 12
+ 10-bit register                                       : 1
+ 1024-bit register                                     : 1
+ 3-bit register                                        : 1
+ 32-bit register                                       : 9
+ 5-bit register                                        : 3
+# Comparators                                          : 3
+ 32-bit comparator lessequal                           : 1
+ 5-bit comparator equal                                : 2
+# Multiplexers                                         : 45
+ 1-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 39
+ 32-bit 32-to-1 multiplexer                            : 3
+ 32-bit 7-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <addr_r_10> of sequential type is unconnected in block <DM0>.
+WARNING:Xst:2677 - Node <addr_r_11> of sequential type is unconnected in block <DM0>.
+WARNING:Xst:2677 - Node <addr_r_12> of sequential type is unconnected in block <DM0>.
+WARNING:Xst:2677 - Node <addr_r_13> of sequential type is unconnected in block <DM0>.
+WARNING:Xst:2677 - Node <addr_r_14> of sequential type is unconnected in block <DM0>.
+WARNING:Xst:2677 - Node <addr_r_15> of sequential type is unconnected in block <DM0>.
+WARNING:Xst:2677 - Node <addr_r_16> of sequential type is unconnected in block <DM0>.
+WARNING:Xst:2677 - Node <addr_r_17> of sequential type is unconnected in block <DM0>.
+WARNING:Xst:2677 - Node <addr_r_18> of sequential type is unconnected in block <DM0>.
+WARNING:Xst:2677 - Node <addr_r_19> of sequential type is unconnected in block <DM0>.
+WARNING:Xst:2677 - Node <addr_r_20> of sequential type is unconnected in block <DM0>.
+WARNING:Xst:2677 - Node <addr_r_21> of sequential type is unconnected in block <DM0>.
+WARNING:Xst:2677 - Node <addr_r_22> of sequential type is unconnected in block <DM0>.
+WARNING:Xst:2677 - Node <addr_r_23> of sequential type is unconnected in block <DM0>.
+WARNING:Xst:2677 - Node <addr_r_24> of sequential type is unconnected in block <DM0>.
+WARNING:Xst:2677 - Node <addr_r_25> of sequential type is unconnected in block <DM0>.
+WARNING:Xst:2677 - Node <addr_r_26> of sequential type is unconnected in block <DM0>.
+WARNING:Xst:2677 - Node <addr_r_27> of sequential type is unconnected in block <DM0>.
+WARNING:Xst:2677 - Node <addr_r_28> of sequential type is unconnected in block <DM0>.
+WARNING:Xst:2677 - Node <addr_r_29> of sequential type is unconnected in block <DM0>.
+WARNING:Xst:2677 - Node <addr_r_30> of sequential type is unconnected in block <DM0>.
+WARNING:Xst:2677 - Node <addr_r_31> of sequential type is unconnected in block <DM0>.
+
+Synthesizing (advanced) Unit <pipelined_regfile_5stage>.
+INFO:Xst:3226 - The RAM <im/Mram_memory> will be implemented as a BLOCK RAM, absorbing the following register(s): <im/addr_r>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 32-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <PCOUT<9:0>>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <INST>          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <DM0/Mram_memory> will be implemented as a BLOCK RAM, absorbing the following register(s): <DM0/addr_r>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 32-bit                  |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <result_out_EXE_MEM<9:0>> |          |
+    |     diA            | connected to signal <rdata2_out_EXE_MEM> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 32-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     enB            | connected to signal <memread_out_EXE_MEM_0> | high     |
+    |     addrB          | connected to signal <result_out_EXE_MEM<9:0>> |          |
+    |     doB            | connected to signal <dm_out>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <pipelined_regfile_5stage> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 1024x32-bit dual-port block RAM                       : 1
+ 1024x32-bit single-port block RAM                     : 1
+# Multipliers                                          : 1
+ 32x32-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 3
+ 32-bit subtractor                                     : 1
+# Registers                                            : 1310
+ Flip-Flops                                            : 1310
+# Comparators                                          : 3
+ 32-bit comparator lessequal                           : 1
+ 5-bit comparator equal                                : 2
+# Multiplexers                                         : 44
+ 32-bit 2-to-1 multiplexer                             : 39
+ 32-bit 32-to-1 multiplexer                            : 3
+ 32-bit 7-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <memtoreg_out> in Unit <ID_EXE_stage> is equivalent to the following FF/Latch, which will be removed : <memread_out> 
+INFO:Xst:2261 - The FF/Latch <imm_out_15> in Unit <ID_EXE_stage> is equivalent to the following 16 FFs/Latches, which will be removed : <imm_out_16> <imm_out_17> <imm_out_18> <imm_out_19> <imm_out_20> <imm_out_21> <imm_out_22> <imm_out_23> <imm_out_24> <imm_out_25> <imm_out_26> <imm_out_27> <imm_out_28> <imm_out_29> <imm_out_30> <imm_out_31> 
+WARNING:Xst:2677 - Node <Mmult_n00163> of sequential type is unconnected in block <alu>.
+
+Optimizing unit <ID_EXE_stage> ...
+
+Optimizing unit <MEM_WB_stage> ...
+
+Optimizing unit <pipelined_regfile_5stage> ...
+
+Optimizing unit <regfile> ...
+
+Optimizing unit <alu> ...
+INFO:Xst:2261 - The FF/Latch <pc/currPC_10> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_10> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_11> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_11> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_12> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_12> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_13> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_13> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_14> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_14> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_20> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_20> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_15> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_15> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_21> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_21> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_16> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_16> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_22> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_22> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_17> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_17> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_23> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_23> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_18> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_18> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_24> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_24> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_19> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_19> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_30> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_30> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_25> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_25> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_31> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_31> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_26> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_26> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_27> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_27> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_28> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_28> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_29> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_29> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_0> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_0> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_1> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_1> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_2> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_2> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_3> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_3> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_4> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_4> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_5> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_5> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_6> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_6> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_7> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_7> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_8> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_8> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_9> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/PCIN_out_9> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/memtoreg_out> in Unit <pipelined_regfile_5stage> is equivalent to the following FF/Latch, which will be removed : <PIPE2/memread_out> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block pipelined_regfile_5stage, actual ratio is 135.
+Optimizing block <pipelined_regfile_5stage> to meet ratio 100 (+ 5) of 600 slices :
+WARNING:Xst:2254 - Area constraint could not be met for block <pipelined_regfile_5stage>, final ratio is 137.
+FlipFlop PIPE1/alusrc_out has been replicated 1 time(s)
+FlipFlop PIPE1/imm_out_15 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1262
+ Flip-Flops                                            : 1262
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : pipelined_regfile_5stage.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2664
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 31
+#      LUT2                        : 12
+#      LUT3                        : 1058
+#      LUT4                        : 94
+#      LUT5                        : 135
+#      LUT6                        : 1031
+#      MUXCY                       : 108
+#      MUXF7                       : 96
+#      VCC                         : 1
+#      XORCY                       : 96
+# FlipFlops/Latches                : 1262
+#      FDR                         : 1259
+#      FDS                         : 3
+# RAMS                             : 4
+#      RAMB16BWER                  : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 415
+#      IBUF                        : 1
+#      OBUF                        : 414
+# DSPs                             : 3
+#      DSP48A1                     : 3
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx4csg225-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1262  out of   4800    26%  
+ Number of Slice LUTs:                 2362  out of   2400    98%  
+    Number used as Logic:              2362  out of   2400    98%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2489
+   Number with an unused Flip Flop:    1227  out of   2489    49%  
+   Number with an unused LUT:           127  out of   2489     5%  
+   Number of fully used LUT-FF pairs:  1135  out of   2489    45%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                         417
+ Number of bonded IOBs:                 416  out of    132   315% (*) 
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                4  out of     12    33%  
+    Number using Block RAM only:          4
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                      3  out of      8    37%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 1269  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 13.645ns (Maximum Frequency: 73.286MHz)
+   Minimum input arrival time before clock: 4.905ns
+   Maximum output required time after clock: 16.730ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 13.645ns (frequency: 73.286MHz)
+  Total number of paths / destination ports: 1881150 / 1413
+-------------------------------------------------------------------------
+Delay:               13.645ns (Levels of Logic = 5)
+  Source:            PIPE1/alusrc_out_1 (FF)
+  Destination:       PIPE2/result_out_17 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: PIPE1/alusrc_out_1 to PIPE2/result_out_17
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             17   0.447   1.028  PIPE1/alusrc_out_1 (PIPE1/alusrc_out_1)
+     LUT3:I2->O            4   0.205   0.683  Mmux_rdata2_mux321 (rdata2_mux<9>)
+     DSP48A1:B9->P47      18   4.394   1.049  ALU0/Mmult_n0016 (ALU0/Mmult_n0016_P47_to_Mmult_n00161)
+     DSP48A1:C30->PCOUT47    1   2.689   0.000  ALU0/Mmult_n00161 (ALU0/Mmult_n00161_PCOUT_to_Mmult_n00162_PCIN_47)
+     DSP48A1:PCIN47->P14    1   2.264   0.580  ALU0/Mmult_n00162 (ALU0/n0016<31>)
+     LUT6:I5->O            2   0.205   0.000  ALU0/Mmux_out252 (aluout_31_OBUF)
+     FDR:D                     0.102          PIPE2/result_out_31
+    ----------------------------------------
+    Total                     13.645ns (10.306ns logic, 3.339ns route)
+                                       (75.5% logic, 24.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1295 / 1295
+-------------------------------------------------------------------------
+Offset:              4.905ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       DM0/Mram_memory1 (RAM)
+  Destination Clock: clk rising
+
+  Data Path: rst to DM0/Mram_memory1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O          1277   1.222   2.378  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            8   0.203   0.802  DM0/Mmux_BUS_000111 (DM0/BUS_0001)
+     RAMB16BWER:WEA2           0.300          DM0/Mram_memory1
+    ----------------------------------------
+    Total                      4.905ns (1.725ns logic, 3.180ns route)
+                                       (35.2% logic, 64.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1812380 / 414
+-------------------------------------------------------------------------
+Offset:              16.730ns (Levels of Logic = 6)
+  Source:            PIPE1/alusrc_out_1 (FF)
+  Destination:       aluout<31> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: PIPE1/alusrc_out_1 to aluout<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             17   0.447   1.028  PIPE1/alusrc_out_1 (PIPE1/alusrc_out_1)
+     LUT3:I2->O            4   0.205   0.683  Mmux_rdata2_mux321 (rdata2_mux<9>)
+     DSP48A1:B9->P47      18   4.394   1.049  ALU0/Mmult_n0016 (ALU0/Mmult_n0016_P47_to_Mmult_n00161)
+     DSP48A1:C30->PCOUT47    1   2.689   0.000  ALU0/Mmult_n00161 (ALU0/Mmult_n00161_PCOUT_to_Mmult_n00162_PCIN_47)
+     DSP48A1:PCIN47->P14    1   2.264   0.580  ALU0/Mmult_n00162 (ALU0/n0016<31>)
+     LUT6:I5->O            2   0.205   0.616  ALU0/Mmux_out252 (aluout_31_OBUF)
+     OBUF:I->O                 2.571          aluout_31_OBUF (aluout<31>)
+    ----------------------------------------
+    Total                     16.730ns (12.775ns logic, 3.955ns route)
+                                       (76.4% logic, 23.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   13.645|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 13.03 secs
+ 
+--> 
+
+Total memory usage is 277908 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   34 (   0 filtered)
+Number of infos    :   38 (   0 filtered)
+
